@@ -83,6 +83,7 @@
 .tag:hover {
     color: black;
     background: white;
+    border-color: white;
 }
 
 .selected-tag-0 {

@@ -64,7 +64,7 @@
 }
 
 .tag-0 {
-    border-color: var(--d0-dark);
+    border-color: var(--d0-dark) !important;
 }
 
 .tag-1 {

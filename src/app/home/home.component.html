@@ -38,7 +38,7 @@
 
 <div class="field">
   <ng-container *ngFor="let tag of tagList; index as i">
-    <span class="tag is-medium mr-4" [ngClass]="selectedTagIndex == i ? 'selected-tag-' + (i%6) : ''" [ngClass]="'tag-' + (i%6)" (click)="selectTag(i)">
+    <span class="tag is-medium mr-4" [ngClass]="selectedTagIndex == i ? 'selected-tag-' + (i%6) : ''" [class]="'tag-' + (i%6)" (click)="selectTag(i)">
       <i [class]="tag.icon"></i>
       <p class="ml-1">{{tag.name}}</p>
     </span>
