@@ -1,0 +1,27 @@
+/* :host {
+    display: inline-block;
+    width: 300px;
+} */
+
+/* form {
+    min-width: 300px;
+    width: 600px;
+    height: 80vh;
+    margin-top: 10vh;
+} */
+
+.selected-tag {
+    background: #994323 !important;
+}
+
+.tag-box {
+    width: 200px;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+    background: royalblue;
+}
+
+.flatpickr-calendar {
+    z-index: 1000 !important;
+}

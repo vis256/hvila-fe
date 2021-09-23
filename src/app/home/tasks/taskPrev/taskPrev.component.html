@@ -1,0 +1,24 @@
+<div class="box">
+    <!-- <div class="tagList">
+        <div *ngFor="let tag of task.tags; index as i" class="tag-view" [class]="'tag-'+(i)">
+            <i class="{{tag.icon}}"></i>
+            {{tag.name}}
+        </div>
+    </div> -->
+
+    <div class="tags">
+        <span *ngFor="let tag of task.tags" class="tag is-medium">
+            <i [class]="tag.icon"></i>
+            {{tag.name}}
+        </span>
+    </div>
+
+    <h1>{{task.title}}</h1>
+    <p>{{task.body}}</p>
+    
+    <div class="{{elemClass}}">
+        <h2>{{dateString}}</h2>
+    </div>
+
+    <button class="button" (click)="deleteTask()">Finish task</button>
+</div>

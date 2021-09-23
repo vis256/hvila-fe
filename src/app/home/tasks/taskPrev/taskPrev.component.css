@@ -1,0 +1,8 @@
+.tag-view {
+    width: fit-content;
+    max-width: 300px;
+    border: seashell;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10%;
+}

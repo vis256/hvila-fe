@@ -1,0 +1,18 @@
+<form class="box" [formGroup]="form" (submit)="submit()">
+    <div class="field">
+    <label class="label">Tag Name</label>
+    <div class="control">
+    <input formControlName="tagName" type="text" class="form-control" placeholder="Tag Name" required>
+    </div>
+    </div>
+  
+    <div class="field">
+    <label class="label">Tag Icon</label>
+    <div class="control">
+    <input formControlName="tagIcon" type="text" class="form-control" placeholder="e.g. fas fa-book">
+    </div>
+    </div>
+  
+    <button class="button" type="submit">Create a Tag</button>
+  </form>
+  

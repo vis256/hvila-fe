@@ -1,0 +1,89 @@
+@import '~flatpickr/dist/flatpickr.min.css';
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary: #E3C5FB;
+    --d0: #FF5CD3;
+    --d1: #F35DD6;
+    --d2: #D75EDD;
+    --d3: #A760E9;
+    --d4: #8162F3;
+    --d5: #5864FD;
+    --d0-dark: #c247a1;
+    --d1-dark: #bd47a5;
+    --d2-dark: #a749ac;
+    --d3-dark: #7c47ad;
+    --d4-dark: #5e48b1;
+    --d5-dark: #3d45b3;
+    --background: #0F0F0F;
+    --navbar-background: #222222;
+    background: var(--background);
+    --text-primary: #FFFFFF;
+    --text-secondary: #f9f9f9;
+
+    --btnrad: 10px;
+    --btn: #8d35ff;
+    --btnhover: #6f00ff;
+}
+
+.date-0 {
+    background-color: var(--d0);
+}
+
+.date-1 {
+    background-color: var(--d1);
+}
+
+.date-2 {
+    background-color: var(--d2);
+}
+
+.date-3 {
+    background-color: var(--d3);
+}
+
+.date-4 {
+    background-color: var(--d4);
+}
+
+.date-5 {
+    background-color: var(--d5);
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.tag-0 {
+    border-color: var(--d0-dark);
+}
+
+.tag-1 {
+    border-color: var(--d1-dark);
+}
+
+.tag-2 {
+    border-color: var(--d2-dark);
+}
+
+.tag-3 {
+    border-color: var(--d3-dark);
+}
+
+.tag-4 {
+    border-color: var(--d4-dark);
+}
+
+.tag-5 {
+    border-color: var(--d5-dark);
+}
+

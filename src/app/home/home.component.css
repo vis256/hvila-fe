@@ -1,0 +1,117 @@
+.fullscreenbg {
+    position: absolute;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.801);
+    z-index: 100;
+}
+
+.editBox {
+    position: absolute;
+    z-index: 101;
+}
+
+/* :host {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+} */
+
+.logo-name {
+    font-weight: 700;
+    color: white;
+}
+
+.navbar-item {
+    background: var(--navbar-background);
+}
+
+.navbar-item:hover {
+    background: var(--navbar-background) !important;
+}
+
+.navbar-menu {
+    background: var(--navbar-background);
+}
+
+.navbar-button {
+    background: var(--btn);
+    color: white;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    height: 37px;
+    border: none;
+}
+
+.navbar-button:hover {
+    background: var(--btnhover);
+}
+
+.navbar-button1 {
+    width: 100px;
+    border-top-left-radius: var(--btnrad);
+    border-bottom-left-radius: var(--btnrad);
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+.navbar-button2 {
+    width: 30px;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    border-top-right-radius: var(--btnrad);
+    border-bottom-right-radius: var(--btnrad);
+}
+
+.navbar-customlink {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-customlink:hover {
+    color: white;
+}
+
+.tag {
+    background: none;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+}
+
+.tag:hover {
+    color: black;
+    background: white;
+}
+
+.selected-tag-0 {
+    color: white !important;
+    background: var(--d0-dark) !important;
+}
+
+.selected-tag-1 {
+    color: white !important;
+    background: var(--d1-dark) !important;
+}
+
+.selected-tag-2 {
+    color: white !important;
+    background: var(--d2-dark) !important;
+}
+
+.selected-tag-3 {
+    color: white !important;
+    background: var(--d3-dark) !important;
+}
+
+.selected-tag-4 {
+    color: white !important;
+    background: var(--d4-dark) !important;
+}
+
+.selected-tag-5 {
+    color: white !important;
+    background: var(--d5-dark) !important;
+}
+

@@ -1,0 +1,30 @@
+<form class="box" [formGroup]="form" (submit)="submit()" id="newTaskForm">
+  <div class="field">
+  <p class="control has-icons-left">
+    <input formControlName="title" type="text" class="form-control input" placeholder="Title" required>
+    <span class="icon is-small is-left">
+      <i class="fas fa-heading"></i>
+    </span>
+  </p>
+  </div>
+
+  <div class="field">
+  <div class="control">
+  <input formControlName="body" type="text" class="form-control input" placeholder="body">
+  </div>
+  </div>
+
+  <div class="field">
+  <ng2-flatpickr [config]="timePickerOptions" formControlName='date' placeholder="Date"></ng2-flatpickr>
+  </div>
+
+  <div class="field">
+    <ng-container *ngFor="let tag of tagList; index as i">
+      <app-tag-select [ngClass]="selectedTags[i] ? 'selected-tag' : 'unselected-tag'" [tag]="tag" (click)="selectedTags[i] = !selectedTags[i]" class="tag-box is-unselectable" ></app-tag-select>
+    </ng-container>
+  </div>
+  <button class="button" type="submit">Create</button>
+
+</form>
+
+

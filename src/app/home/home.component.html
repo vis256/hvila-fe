@@ -1,0 +1,52 @@
+<app-newTask [tagList]="tagList" class="editBox" *ngIf="editingNote" (onCreate)="execOnCreate()"></app-newTask>
+
+<div *ngIf="editingNote" class="fullscreenbg" (click)="stopCreate()"></div>
+
+<nav class="navbar" role="navigation">
+  <div class="navbar-brand">
+    <a routerLink="/" class="navbar-item">
+      <img src="../../assets/3.svg" alt="" >
+      <h1 class="logo-name is-size-6">Hvila</h1>
+    </a>
+
+    <div class="navbar-item">
+      <button *ngIf="authenticated" class="navbar-button1 navbar-button is-size-6 has-text-centered" (click)="startCreate()">
+        New Note
+      </button>
+      <button *ngIf="authenticated" routerLink="/newtag" class="navbar-button navbar-button2" >
+        <i class="fas fa-cog"></i>
+      </button>
+    </div>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarOptions">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarOptions" class="navbar-menu">
+    <div class="navbar-start ">
+      
+    </div>
+    <div class="navbar-end">
+      <a *ngIf="!authenticated" routerLink="/login" class="navbar-item">Login</a>
+      <a *ngIf="!authenticated" routerLink="/register" class="navbar-item">Register</a>
+      <a *ngIf="authenticated" routerLink="/" class="navbar-item navbar-customlink" (click)="logout()">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="field">
+  <ng-container *ngFor="let tag of tagList; index as i">
+    <span class="tag is-medium mr-4" [ngClass]="selectedTagIndex == i ? 'selected-tag-' + (i%6) : ''" [ngClass]="'tag-' + (i%6)" (click)="selectTag(i)">
+      <i [class]="tag.icon"></i>
+      <p class="ml-1">{{tag.name}}</p>
+    </span>
+    <!-- <app-tag-select [ngClass]="selectedTagIndex == i ? 'selected-tag' : 'unselected-tag'" [tag]="tag" (click)="selectTag(i)" class="tag-box is-unselectable" ></app-tag-select> -->
+  </ng-container>
+</div>
+
+<app-taskList [filter]="filter" [refInput]="refInput"></app-taskList>
+
+
+<!-- {{message}} -->
