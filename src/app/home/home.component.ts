@@ -51,6 +51,9 @@ export class HomeComponent implements OnInit {
           // Emitters.authEmitter.emit(false);
         }
       );
+      
+      // get user style
+      this.mobileStyle = localStorage.getItem("hvilaMobile") == 'true';
 
       // get tag list 
       this.http.get('http://localhost:3000/api/tags', {withCredentials: true, headers: {

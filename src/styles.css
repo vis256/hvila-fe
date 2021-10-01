@@ -20,7 +20,8 @@
     --d3-dark: #7c47ad;
     --d4-dark: #5e48b1;
     --d5-dark: #3d45b3;
-    --background: #0F0F0F;
+    /* --background: #0F0F0F; */
+    --background: #222222;
     --navbar-background: #222222;
     background: var(--background);
     --text-primary: #FFFFFF;
@@ -32,27 +33,27 @@
 }
 
 .date-0 {
-    background-color: var(--d0);
+    background-color: var(--d0-dark);
 }
 
 .date-1 {
-    background-color: var(--d1);
+    background-color: var(--d1-dark);
 }
 
 .date-2 {
-    background-color: var(--d2);
+    background-color: var(--d2-dark);
 }
 
 .date-3 {
-    background-color: var(--d3);
+    background-color: var(--d3-dark);
 }
 
 .date-4 {
-    background-color: var(--d4);
+    background-color: var(--d4-dark);
 }
 
 .date-5 {
-    background-color: var(--d5);
+    background-color: var(--d5-dark);
 }
 
 .text-primary {
