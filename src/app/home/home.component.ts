@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   authenticated = false;
   editingNote = false;
   refInput = true;
+  mobileStyle = true;
 
   constructor(
     private http: HttpClient,
@@ -29,13 +30,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     var token = localStorage.getItem('hvilaToken');
     if (token == "") {
-
-
-
-
-
+      // do something idk
     } else {
-      // smthing
+      // try to login
       this.http.get('http://localhost:3000/api/user', {withCredentials: true, headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -104,4 +101,8 @@ export class HomeComponent implements OnInit {
     this.refInput = !this.refInput;
   }
 
+  swapStyle() {
+    this.mobileStyle = !this.mobileStyle;
+    localStorage.setItem("hvilaMobile", this.mobileStyle.toString())
+  }
 }

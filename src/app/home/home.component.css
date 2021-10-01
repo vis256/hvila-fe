@@ -72,6 +72,10 @@
     color: white;
 }
 
+.navbar-brand {
+    background: var(--navbar-background);
+}
+
 .tag {
     background: none;
     color: white;
@@ -84,6 +88,10 @@
     color: black;
     background: white;
     border-color: white;
+}
+
+.layout-btn:hover {
+    color: white;
 }
 
 .selected-tag-0 {

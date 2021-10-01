@@ -29,6 +29,8 @@
       
     </div>
     <div class="navbar-end">
+      <i *ngIf="mobileStyle"class="navbar-item fas fa-th-large layout-btn" (click)="swapStyle()"></i>
+      <i *ngIf="!mobileStyle" class="navbar-item fas fa-th layout-btn" (click)="swapStyle()"></i>
       <a *ngIf="!authenticated" routerLink="/login" class="navbar-item">Login</a>
       <a *ngIf="!authenticated" routerLink="/register" class="navbar-item">Register</a>
       <a *ngIf="authenticated" routerLink="/" class="navbar-item navbar-customlink" (click)="logout()">Logout</a>
@@ -36,7 +38,7 @@
   </div>
 </nav>
 
-<div class="field">
+<div class="field mt-2">
   <ng-container *ngFor="let tag of tagList; index as i">
     <span class="tag is-medium mr-4" [ngClass]="selectedTagIndex == i ? 'selected-tag-' + (i%6) : ''" [class]="'tag-' + (i%6)" (click)="selectTag(i)">
       <i [class]="tag.icon"></i>
@@ -46,7 +48,5 @@
   </ng-container>
 </div>
 
-<app-taskList [filter]="filter" [refInput]="refInput"></app-taskList>
 
-
-<!-- {{message}} -->
+<app-taskList [filter]="filter" [refInput]="refInput" [mobileStyle]="mobileStyle"></app-taskList>
