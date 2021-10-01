@@ -1,1 +1,6 @@
-<app-taskPrev *ngFor="let task of taskList" [task]="task" (onDelete)="execOnDelete($event)"></app-taskPrev>
+<div *ngIf="!mobileStyle" class="tile is-ancestor">
+        <app-taskPrev *ngFor="let task of taskList" [task]="task" (onDelete)="execOnDelete($event)"></app-taskPrev>
+</div>
+<div *ngIf="mobileStyle" class="tile is-ancestor">
+        <app-task-prev-mobile *ngFor="let task of taskList" [task]="task" (onDelete)="execOnDelete($event)"></app-task-prev-mobile>
+</div>

@@ -8,14 +8,30 @@
 .box {
     box-shadow: none !important;
     background: #00000020;
+    width: 300px;
+    max-width: 300px;
+    height: 300px;
+    max-height: 300px;
 }
 
 h1 {
     color: white;
+    word-break: break-all;
 }
 
 .content {
+    height: 100%;
+    max-height: 200px;
     color: white;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.tags {
+    /* height: min-content; */
+    flex-direction: column;
+    overflow: scroll;
+    height: 32px;
 }
 
 .tag {

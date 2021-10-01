@@ -14,6 +14,8 @@ import { TasksComponent } from './home/tasks/tasks.component';
 import { TaskPrevComponent } from './home/tasks/taskPrev/taskPrev.component';
 import { NewTagComponent } from './new-tag/new-tag.component';
 import { TagSelectComponent } from './home/tasks/newTask/tag-select/tag-select.component';
+import { TaskPrevMobileComponent } from './home/tasks/task-prev-mobile/task-prev-mobile.component';
+import { TaskListComponent } from './home/tasks/task-list/task-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { TagSelectComponent } from './home/tasks/newTask/tag-select/tag-select.c
     TasksComponent,
     TaskPrevComponent,
     NewTagComponent,
-    TagSelectComponent
+    TagSelectComponent,
+    TaskPrevMobileComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,

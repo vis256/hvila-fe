@@ -20,6 +20,7 @@ interface Task {
 export class TasksComponent implements OnInit {
   @Input() filter: string;
   @Input() refInput: boolean;
+  @Input() mobileStyle: boolean;
 
   constructor(
     private http: HttpClient,
