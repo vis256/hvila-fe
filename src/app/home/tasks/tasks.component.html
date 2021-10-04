@@ -2,5 +2,14 @@
         <app-taskPrev *ngFor="let task of taskList" [task]="task" (onDelete)="execOnDelete($event)"></app-taskPrev>
 </div>
 <div *ngIf="mobileStyle" class="tile is-ancestor">
-        <app-task-prev-mobile *ngFor="let task of taskList" [task]="task" (onDelete)="execOnDelete($event)"></app-task-prev-mobile>
+        <app-task-prev-mobile *ngFor="let task of taskList; index as i" [taskIndex]="i" [task]="task" (onDelete)="execOnDelete($event)" (onPrev)="togglePrev($event)"></app-task-prev-mobile>
+        <div class="modal" [ngClass]="previewing ? 'is-active' : ''">
+                <div class="modal-background" (click)="togglePrev()"></div>
+                <div class="modal-content">
+                        <div class="box">
+                        <app-taskPrev [task]="prevTask" (onDelete)="execOnDelete($event)"></app-taskPrev>
+                        </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close" (click)="togglePrev(i)"></button>
+        </div>
 </div>

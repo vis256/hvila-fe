@@ -22,6 +22,9 @@ export class TasksComponent implements OnInit {
   @Input() refInput: boolean;
   @Input() mobileStyle: boolean;
 
+  previewing = false;
+  prevTask: Task;
+
   constructor(
     private http: HttpClient,
   ) {
@@ -30,6 +33,7 @@ export class TasksComponent implements OnInit {
 
 
   taskList: Task[];
+  
   // taskList = [{}, {}, {}];
 
   ngOnInit(): void {
@@ -45,7 +49,7 @@ export class TasksComponent implements OnInit {
         console.log("TETRGESGERGREGE", res);
 
         this.taskList = res.tasks;              
-
+        this.prevTask = this.taskList[0]
         Emitters.authEmitter.emit(true);
       },
       err => {
@@ -72,6 +76,11 @@ export class TasksComponent implements OnInit {
       console.log(res);
       this.ngOnInit();
     });
+  }
+
+  togglePrev(i: string) {
+    this.previewing = !this.previewing;
+    this.prevTask = this.taskList[parseInt(i)];
   }
 
 }

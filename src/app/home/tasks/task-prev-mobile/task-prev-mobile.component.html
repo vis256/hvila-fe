@@ -1,15 +1,15 @@
 <div class="box">
-    
-    <h1 class="title is-4 mb-2">{{task.title}}</h1>
-    <div class="content mb-1">{{task.body}}</div>
-    
-    <div class="tags mb-0">
-        <span *ngFor="let tag of task.tags" class="tag is-small mb-0">
-            <i [class]="tag.icon"></i>
-            <p class="ml-1">{{tag.name}}</p>
-        </span>
+    <div class="content-container mb-2" (click)="showPrev()">
+        <h1 class="title is-4 mb-2">{{task.title}}</h1>
+        <div class="content mb-1">{{task.body}}</div>
+        
+        <div class="tags">
+            <span *ngFor="let tag of task.tags" class="tag is-small mb-0">
+                <i [class]="tag.icon"></i>
+                <p class="ml-1">{{tag.name}}</p>
+            </span>
+        </div>
     </div>
-
     <div class="{{elemClass}} date">
         <h2 class="is-size-5 pt-2 pb-1 has-text-centered" (click)="deleteTask()">{{dateString}}</h2>
     </div>

@@ -18,7 +18,9 @@ interface Task {
 })
 export class TaskPrevMobileComponent implements OnInit {
   @Input() task: Task;
+  @Input() taskIndex: number;
   @Output() onDelete = new EventEmitter();
+  @Output() onPrev = new EventEmitter();
 
   constructor(
     private http: HttpClient,
@@ -41,5 +43,9 @@ export class TaskPrevMobileComponent implements OnInit {
 
   deleteTask() {
     this.onDelete.emit(this.task.id.toString());
+  }
+
+  showPrev() {
+    this.onPrev.emit(this.taskIndex.toString())
   }
 }
